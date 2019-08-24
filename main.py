@@ -17,12 +17,12 @@ def do_start(bot:Bot, update:Update):
         text='Привет, отправь мне первое сообщение.'
     )
 
-
 def do_help(bot, update):
     bot.send_message(
         chat_id=update.message.chat_id,
         text='Я только тренировочный бот, ничем не могу помочь. 😔'
     )
+    
 def do_echo(bot, update):
     text = update.message.text
     bot.send_message(
