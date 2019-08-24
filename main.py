@@ -4,10 +4,8 @@ from telegram.ext import CommandHandler, Filters, MessageHandler, Updater
 from config import REQUEST_KWARGS, TOKEN
 
 
-
 #Подключаем token и proxy
 updater = Updater(TOKEN, request_kwargs=REQUEST_KWARGS)
-
 
 
 #Функции  callback
@@ -22,14 +20,13 @@ def do_help(bot, update):
         chat_id=update.message.chat_id,
         text='Я только тренировочный бот, ничем не могу помочь. 😔'
     )
-    
+
 def do_echo(bot, update):
     text = update.message.text
     bot.send_message(
         chat_id=update.message.chat_id,
         text=text
     )
-
 
 
 #Обработчики событий
@@ -45,3 +42,4 @@ updater.dispatcher.add_handler(message_handler)
 
 
 updater.start_polling()
+updater.idle()
