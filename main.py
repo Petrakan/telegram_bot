@@ -8,7 +8,7 @@ from config import REQUEST_KWARGS, TOKEN
 updater = Updater(TOKEN, request_kwargs=REQUEST_KWARGS)
 
 
-#Функции  callback
+#Функции  обработчики     //callback
 def do_start(bot:Bot, update:Update):
     bot.send_message(
         chat_id=update.message.chat_id,
@@ -29,7 +29,7 @@ def do_echo(bot, update):
     )
 
 
-#Обработчики событий
+#Обработчики событий/команд
 start_handler = CommandHandler('start', do_start)
 help_handler = CommandHandler('help', do_help)
 message_handler = MessageHandler(Filters.all, do_echo)
