@@ -35,7 +35,7 @@ def do_echo(bot, update):
 #Обработчики событий
 start_handler = CommandHandler('start', do_start)
 help_handler = CommandHandler('help', do_help)
-message_handler = MessageHandler(Filters.text, do_echo)
+message_handler = MessageHandler(Filters.all, do_echo)
 
 
 #Регистрация обработчика
