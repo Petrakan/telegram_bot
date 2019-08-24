@@ -5,7 +5,7 @@ from config import REQUEST_KWARGS, TOKEN
 
 
 #Подключаем token и proxy
-updater = Updater(TOKEN, request_kwargs=REQUEST_KWARGS)
+updater = Updater(TOKEN)
 
 
 #Функции  обработчики     //callback
