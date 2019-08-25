@@ -29,7 +29,7 @@ def do_echo(bot, update):
     )
 
 
-#Обработчики событий/команд
+#Устанавливаем связь обработчика событий с функциями
 start_handler = CommandHandler('start', do_start)
 help_handler = CommandHandler('help', do_help)
 message_handler = MessageHandler(Filters.all, do_echo)
